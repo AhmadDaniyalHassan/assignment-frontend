@@ -1,6 +1,6 @@
 # Project Name Readme
 ## Overview
-Welcome to the [Project Name]! This web application is built using Next.js for the frontend, Node.js (with Express) for the backend, Sequelize ORM for database operations, and optionally Redux for state management.
+Welcome to the [assignment Frontend]! This web application is built using Next.js for the frontend, Node.js (with Express) for the backend, Sequelize ORM for database operations, and optionally Redux for state management.
 
 ## Tasks
 1. Dashboard Setup
