@@ -357,16 +357,20 @@ const Home = () => {
                                             <td className="border p-2">{voucher.currency}</td>
                                             <td className="border p-2">{voucher.exchange_rate}</td>
                                             <td className="border p-2">{voucher.payRecieveTo}</td>
-                                            <td className="border p-2">
-                                                <button
-                                                    onClick={() => handleEditClick(voucher.id)}
-                                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded'
-                                                >
-                                                    Edit
-                                                </button>
-                                                &nbsp;
+                                            {state.isAuthenticated ? (
+                                                <td className="border p-2">
+                                                    <>
+                                                        <button
+                                                            onClick={() => handleEditClick(voucher.id)}
+                                                            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded'
+                                                        >
+                                                            Edit
+                                                        </button>
+                                                        &nbsp;
 
-                                            </td>
+                                                    </>
+                                                </td>
+                                            ) : ("")}
                                         </tr>
                                         {voucher.VoucherItem && (
                                             <tr>
