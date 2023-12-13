@@ -47,7 +47,7 @@ const Home = () => {
 
         try {
             // Send the entire formData object to the backend
-            const response = await axios.post('https://7812-39-34-176-183.ngrok-free.app/api/voucher/addVoucher', convertedFormData);
+            const response = await axios.post('https://80c8-111-88-181-82.ngrok-free.app/api/voucher/addVoucher', convertedFormData);
             console.log(response.data);
             console.log(convertedFormData);
             fetchVoucherData();
@@ -60,7 +60,7 @@ const Home = () => {
     };
     const fetchVoucherData = async () => {
         try {
-            const response = await axios.post('https://7812-39-34-176-183.ngrok-free.app/api/voucher/getvoucher');
+            const response = await axios.post('https://80c8-111-88-181-82.ngrok-free.app/api/voucher/getvoucher');
             setVouchersDatas(response.data.data);
         } catch (error) {
             console.error('Error fetching voucher data:', error);
