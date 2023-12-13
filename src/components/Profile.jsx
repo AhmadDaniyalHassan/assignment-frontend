@@ -12,7 +12,7 @@ const ProfilePage = () => {
             try {
                 if (state.user?.id) {
 
-                    const response = await axios.post('https://061f-39-34-176-183.ngrok-free.app/api/user/getuser', {
+                    const response = await axios.post('https://7812-39-34-176-183.ngrok-free.app/api/user/getuser', {
                         id: state.user.id
                     });
                     setGetUser(response?.data?.user);

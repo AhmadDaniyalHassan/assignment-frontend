@@ -46,9 +46,9 @@ const EditVoucher = ({ voucherId }) => {
 
         const fetchVoucherDetails = async () => {
             try {
-                const response = await axios.get(`https://061f-39-34-176-183.ngrok-free.app/api/voucher/getsinglevoucher/${storedVoucherId}`);
+                const response = await axios.post(`https://7812-39-34-176-183.ngrok-free.app/api/voucher/getsinglevoucher/${storedVoucherId}`);
                 const voucherData = response.data;
-
+                console.log('voucerh,', voucherData)
                 // Update state with the fetched data
                 setFormData({
                     voucherId: storedVoucherId,
@@ -74,7 +74,7 @@ const EditVoucher = ({ voucherId }) => {
                     ],
                 });
             } catch (error) {
-                console.error('Error fetching voucher details:', error);
+                console.error('Error fetching voucher details:', error.data);
             }
         };
 
@@ -111,7 +111,7 @@ const EditVoucher = ({ voucherId }) => {
 
         try {
             // Send the updated data to the backend for editing
-            const response = await axios.put(`https://061f-39-34-176-183.ngrok-free.app/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
+            const response = await axios.put(`https://7812-39-34-176-183.ngrok-free.app/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
             console.log(response.data);
             navigate("/")
             // Handle any additional logic, such as navigating back to the main page
