@@ -46,7 +46,7 @@ const EditVoucher = ({ voucherId }) => {
 
         const fetchVoucherDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/voucher/getsinglevoucher/${storedVoucherId}`);
+                const response = await axios.get(`https://95b2-39-34-176-183.ngrok-free.app/api/voucher/getsinglevoucher/${storedVoucherId}`);
                 const voucherData = response.data;
 
                 // Update state with the fetched data
@@ -111,7 +111,7 @@ const EditVoucher = ({ voucherId }) => {
 
         try {
             // Send the updated data to the backend for editing
-            const response = await axios.put(`http://localhost:3001/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
+            const response = await axios.put(`https://95b2-39-34-176-183.ngrok-free.app/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
             console.log(response.data);
             navigate("/")
             // Handle any additional logic, such as navigating back to the main page
