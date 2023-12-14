@@ -111,7 +111,7 @@ const EditVoucher = ({ voucherId }) => {
 
         try {
             // Send the updated data to the backend for editing
-            const response = await axios.put(`/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
+            const response = await axios.put(`https://backend-auth-x6d3.onrender.com/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
             console.log(response.data);
             navigate("/")
             // Handle any additional logic, such as navigating back to the main page
