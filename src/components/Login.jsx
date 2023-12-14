@@ -24,7 +24,7 @@ const Login = () => {
 
         try {
             // Perform your login API request using Axios
-            const response = await axios.post('https://12d0-182-190-101-81.ngrok-free.app/api/user/login', loginData);
+            const response = await axios.post('https://backend-auth-x6d3.onrender.com/api/user/login', loginData);
             if (response.data.success) {
                 console.log(response.data);
                 login(response.data.user);

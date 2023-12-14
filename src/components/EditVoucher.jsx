@@ -46,7 +46,7 @@ const EditVoucher = ({ voucherId }) => {
 
         const fetchVoucherDetails = async () => {
             try {
-                const response = await axios.post(`https://12d0-182-190-101-81.ngrok-free.app/api/voucher/getsinglevoucher/${storedVoucherId}`);
+                const response = await axios.post(`https://backend-auth-x6d3.onrender.com/api/voucher/getsinglevoucher/${storedVoucherId}`);
                 const voucherData = response.data;
                 console.log('voucerh,', voucherData)
                 // Update state with the fetched data
@@ -111,7 +111,7 @@ const EditVoucher = ({ voucherId }) => {
 
         try {
             // Send the updated data to the backend for editing
-            const response = await axios.put(`https://12d0-182-190-101-81.ngrok-free.app/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
+            const response = await axios.put(`/api/voucher/edit-voucher/${storedVoucherIds}`, requestData);
             console.log(response.data);
             navigate("/")
             // Handle any additional logic, such as navigating back to the main page

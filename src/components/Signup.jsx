@@ -24,7 +24,7 @@ const Signup = () => {
             console.log('Form Data:', formData);
 
             // Replace 'YOUR_API_URL' with your actual API endpoint for signup
-            const apiUrl = 'https://12d0-182-190-101-81.ngrok-free.app/api/user/signup';
+            const apiUrl = 'https://backend-auth-x6d3.onrender.com/api/user/signup';
             const response = await axios.post(apiUrl, formData);
             console.log('Signup successful:', response.data);
             navigate('/login')
