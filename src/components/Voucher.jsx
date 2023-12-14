@@ -7,7 +7,7 @@ const Voucher = () => {
     useEffect(() => {
         const fetchVoucherData = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/vosucher/getvoucher');
+                const response = await axios.get('https://12d0-182-190-101-81.ngrok-free.app/api/vosucher/getvoucher');
                 setVouchersDatas(response.data.data);
             } catch (error) {
                 console.error('Error fetching voucher data:', error);
